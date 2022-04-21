@@ -51,6 +51,10 @@ button:hover {
     width: 25%;
 }
 
+.amenities li input {
+    margin-right: 10px;
+}
+
 .popover {
     visibility: hidden;
     width: 100%;
