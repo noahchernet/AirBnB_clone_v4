@@ -14,4 +14,15 @@ $('document').ready(function () {
     }
     $('.amenities h4').text(names);
   });
+
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+    console.log(data.status);
+    if (data.status === 'OK') {
+      console.log(data.status);
+      console.log('Updated');
+      $('.api_status').addClass('available');
+    } else {
+      $('.api_status').removeClass('available');
+    }
+  });
 });
